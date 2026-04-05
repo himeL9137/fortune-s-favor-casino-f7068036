@@ -1,19 +1,30 @@
 {
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"],
   "compilerOptions": {
-    "noEmit": true,
-    "module": "ESNext",
-    "strict": true,
-    "lib": ["esnext", "dom", "dom.iterable"],
-    "jsx": "react-jsx",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
     "allowImportingTsExtensions": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ],
+    "module": "ESNext",
     "moduleResolution": "bundler",
-    "baseUrl": ".",
+    "noEmit": true,
     "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts"
+  ],
+  "include": [
+    "src/**/*"
+  ]
 }
